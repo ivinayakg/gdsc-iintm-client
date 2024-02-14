@@ -30,7 +30,8 @@ export default function EventsList({ events }: { events: any[] }) {
                   ></div>
                 )}
                 <CardDescription>
-                  {event.attributes.overview.slice(0, 200) + "..."}
+                  {event.attributes.overview.length &&
+                    event.attributes.overview.slice(0, 200) + "..."}
                 </CardDescription>
               </CardHeader>
               <CardFooter>
