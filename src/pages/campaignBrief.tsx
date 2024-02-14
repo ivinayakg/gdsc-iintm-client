@@ -23,16 +23,20 @@ export default function CampaignBrief() {
   );
 
   const bannerImage =
+    campaign &&
     API_BASE_URL +
-    (campaign as any)?.attributes.bannerImage.data.attributes.formats.large.url;
+      (campaign as any)?.attributes.bannerImage.data.attributes.formats.large
+        .url;
 
   return (
     <div className="flex flex-col justify-center items-start gap-2">
-      <img
-        src={bannerImage}
-        alt="decoration"
-        className="w-screen object-contain md:w-8/12 md:mx-auto md:rounded-md"
-      />
+      {campaign && (
+        <img
+          src={bannerImage ?? ""}
+          alt="decoration"
+          className="w-screen object-contain md:w-8/12 md:mx-auto md:rounded-md"
+        />
+      )}
 
       <div className="flex flex-col justify-center items-start p-4 md:p-20 mt-4 md:mt-8 gap-5 w-screen">
         <div className="flex flex-col justify-center items-start gap-1">
