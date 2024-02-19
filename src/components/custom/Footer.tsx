@@ -1,14 +1,13 @@
 import { Typography } from "@material-tailwind/react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
     <footer className="w-full bg-white p-8">
       <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 bg-white text-center md:justify-between">
-        <img
-          src="/GDSCLogo_transparent.png"
-          alt="logo-ct"
-          className="w-10"
-        />
+        <Link to={"/"}>
+          <img src="/GDSCLogo_transparent.png" alt="logo-ct" className="w-10" />
+        </Link>
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
           <li>
             <Typography
@@ -18,7 +17,7 @@ export default function Footer() {
               className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
               placeholder={"About Us"}
             >
-              About Us
+              <Link to={"/about"}>About Us</Link>
             </Typography>
           </li>
           <li>
@@ -29,7 +28,7 @@ export default function Footer() {
               className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
               placeholder={"Contact Us"}
             >
-              Contact Us
+              <Link to={"/contact-us"}>Contact Us</Link>
             </Typography>
           </li>
         </ul>

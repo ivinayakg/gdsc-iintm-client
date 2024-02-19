@@ -20,7 +20,7 @@ export default function Home() {
       <div className="w-screen h-[80vh] md:h-[95vh]">
         <HeroSection />
       </div>
-      <div className="flex flex-col justify-center items-center w-full px-4 py-6">
+      <div className="flex flex-col justify-center items-center w-full px-4 py-6 md:p-12">
         <h1 className="font-open-sans text-3xl md:text4xl font-semibold">Upcoming Events</h1>
         <div className="w-full">
           <EventsList events={events} />
