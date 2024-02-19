@@ -35,11 +35,12 @@ export default function EventBrief() {
     <RichTextRenderer content={(eventData as any)?.attributes.description} />
   );
 
+  console.log((eventData as any)?.attributes.community_register_link);
+
   const bannerImage =
     eventData &&
     API_BASE_URL +
-      (eventData as any).attributes.bannerImage.data.attributes.formats.large
-        .url;
+      (eventData as any).attributes.bannerImage.data.attributes.url;
 
   function loginHandler() {
     const redirectUrl = API_BASE_URL + "/api/connect/google/init";
@@ -74,7 +75,7 @@ export default function EventBrief() {
   let actionButton = <></>;
   if ((eventData as any)?.attributes.community_platform_login) {
     actionButton = (
-      <a href={(eventData as any)?.community_register_link}>
+      <a href={(eventData as any)?.attributes.community_register_link}>
         <button className="py-2 px-8 rounded-lg bg-theme-colors-blue text-white">
           Register At Community Platform
         </button>

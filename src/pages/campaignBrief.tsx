@@ -25,8 +25,7 @@ export default function CampaignBrief() {
   const bannerImage =
     campaign &&
     API_BASE_URL +
-      (campaign as any)?.attributes.bannerImage.data.attributes.formats.large
-        .url;
+      (campaign as any)?.attributes.bannerImage.data.attributes?.url;
 
   return (
     <div className="flex flex-col justify-center items-start gap-2">
@@ -63,7 +62,7 @@ export default function CampaignBrief() {
           {renderedContent}
         </div>
         <span className="w-full h-[0.25px] bg-black/80"></span>
-        <div className="flex flex-col justify-center items-start">
+        <div className="flex flex-col justify-center items-start w-full">
           <h2 className="text-black text-2xl font-bold font-open-sans">
             Events
           </h2>

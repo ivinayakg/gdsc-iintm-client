@@ -135,7 +135,7 @@ export default function Header({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "w-screen max-w-full flex justify-between items-center rounded-full bg-white shadow-input px-6 md:px-12 py-6 md:mx-auto",
+        "w-screen max-w-full flex justify-between items-center rounded-full bg-white shadow-input px-4 md:px-12 py-6 md:mx-auto",
         className
       )}
     >
