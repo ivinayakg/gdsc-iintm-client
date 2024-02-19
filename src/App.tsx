@@ -6,6 +6,8 @@ import { MainProvider } from "@/components/main-provider";
 import Campaigns from "@/pages/campaigns";
 import CampaignBrief from "./pages/campaignBrief";
 import EventBrief from "./pages/eventBrief";
+import AboutPage from "./pages/about";
+import Contact from "./pages/Contact";
 
 function Main() {
   return (
@@ -38,6 +40,14 @@ function App() {
           path: "/events/:eventId",
           element: <EventBrief />,
         },
+        {
+          path:"/about",
+          element: <AboutPage />,
+        },
+        {
+          path:"/contact-us",
+          element: <Contact/>,
+        }
       ],
     },
     {
