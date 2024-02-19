@@ -17,6 +17,10 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        "contact-page-bg": "url('/contact_bg.jpg')",
+        "gdsc-svg-page-bg": "url('/gdsc-bg.png')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
