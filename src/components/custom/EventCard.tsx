@@ -67,7 +67,7 @@ export default function EventCard({ event }: { event: any }) {
       </CardBody>
       <CardFooter
         placeholder="card_footer"
-        className="flex items-center justify-between"
+        className="flex items-center justify-between mt-auto"
       >
         <Link
           to={"/events/" + event.id}
