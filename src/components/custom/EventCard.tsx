@@ -12,7 +12,7 @@ export default function EventCard({ event }: { event: any }) {
   let thumbnailImage =
     event.attributes.bannerImage.data &&
     API_BASE_URL +
-      event.attributes.bannerImage.data.attributes.formats.thumbnail.url;
+      event.attributes.bannerImage.data.attributes.url;
 
   const date = new Date((event as any)?.attributes.startTime);
   const options = {
@@ -42,7 +42,7 @@ export default function EventCard({ event }: { event: any }) {
           <img
             src={thumbnailImage}
             alt={event.attributes.title}
-            className="w-full object-contain"
+            className="w-full object-cover h-[180px] object-left"
           />
         )}
       </CardHeader>
