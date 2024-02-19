@@ -139,9 +139,12 @@ export default function Header({ className }: { className?: string }) {
         className
       )}
     >
-      <h1 className="text-lg md:text-2xl font-open-sans font-semibold">
-        <Link to={"/"}>GDSC IINTM</Link>
-      </h1>
+      <div className="flex justify-center items-center gap-2">
+        <img src="/GDSCLogo_transparent.png" alt="logo-ct" className="w-10" />
+        <h1 className="text-lg md:text-2xl font-open-sans font-semibold">
+          <Link to={"/"}>GDSC IINTM</Link>
+        </h1>
+      </div>
 
       <div className="flex justify-center items-center gap-5">
         <Menu setActive={setActive}>
