@@ -14,7 +14,7 @@ export default function CampaignsList({ campaigns }: { campaigns: any[] }) {
       {campaigns.map((campaign) => {
         let thumbnailImage =
           API_BASE_URL +
-          campaign.attributes.bannerImage.data.attributes.url;
+          campaign.attributes.bannerImage.data.attributes.formats.thumbnail.url;
 
         return (
           <Card key={campaign.id}>

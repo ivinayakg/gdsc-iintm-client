@@ -15,7 +15,7 @@ function Main() {
     <MainProvider>
       <Header />
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </MainProvider>
   );
 }

@@ -135,16 +135,13 @@ export default function Header({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "w-screen max-w-full flex justify-between items-center rounded-full bg-white shadow-input px-4 md:px-12 py-6 md:mx-auto",
+        "max-w-full flex justify-between items-center rounded-full bg-white shadow-input px-6 md:px-12 py-6 md:mx-auto overflow-y-hidden",
         className
       )}
     >
-      <div className="flex justify-center items-center gap-2">
-        <img src="/GDSCLogo_transparent.png" alt="logo-ct" className="w-10" />
-        <h1 className="text-lg md:text-2xl font-open-sans font-semibold">
-          <Link to={"/"}>GDSC IINTM</Link>
-        </h1>
-      </div>
+      <h1 className="text-lg md:text-2xl font-open-sans font-semibold">
+        <Link to={"/"}>GDSC IINTM</Link>
+      </h1>
 
       <div className="flex justify-center items-center gap-5">
         <Menu setActive={setActive}>
